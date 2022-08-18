@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Flex from "../../components/globalStyles/Flex";
 import { Link } from "react-router-dom";
+import theme from "../globalStyles/theme";
 
 const Nav = styled(Flex)`
   padding: 1rem 2rem;
@@ -16,6 +17,37 @@ export const Logo = styled(Link)`
   span {
     font-weight: 400;
     color: ${({ theme }) => theme.colors.mainColor};
+  }
+`;
+
+export const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.mainColor};
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    flex-direction: column;
+  }
+`;
+
+export const Menu = styled(Flex)`
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    display: block;
+    width: 100%;
+    max-height: ${({ isOpen }) => (isOpen ? "400px" : "0")};
+    overflow: hidden;
+  }
+`;
+
+export const MenuLink = styled(Link)`
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.linkColor};
+  transition: all 0.3s ease-in-out;
+  &hover {
+    color: ${({ theme }) => theme.colors.mainColor};
+    font-weight: bold;
   }
 `;
 
