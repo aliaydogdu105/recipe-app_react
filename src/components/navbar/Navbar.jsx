@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import Nav, { Logo, Menu, MenuLink, Hamburger } from "./Navbar.styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <Nav justify="space-between" wrap="wrap">
       <Logo to="/">

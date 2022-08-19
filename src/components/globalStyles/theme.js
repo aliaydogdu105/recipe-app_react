@@ -1,8 +1,8 @@
 const theme = {
   colors: {
-    navBgColor: "red",
-    mainColor: "purple",
-    logoColor: "aqua",
+    navbarBgColor: "pink",
+    mainColor: "tomato",
+    logoColor: "grey",
     linkColor: "blue",
   },
   screens: {
