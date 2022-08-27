@@ -1,10 +1,14 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { Header } from "../login/Login.styled";
+import { useState } from "react";
+import Cards from "../../components/cards/Cards";
+import Header from "../../components/header/Header";
+import { HomeImg, ImgDiv, HeaderText } from "./Home.styled";
+import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
+  const mealType = ["Breakfast", "Launch", "Dinner", "Snack", "Teatime"];
   const [query, setQuery] = useState("egg");
-  const [selectedMeal, setSelectedMeal] = useState("breakfast");
+  const [selectedMeal, setSelectedMeal] = useState(mealType[0]);
   const [recipes, setRecipes] = useState(null);
 
   const APP_ID = process.env.REACT_APP_APP_ID;
@@ -25,13 +29,25 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <div>
-      <Header />
+      <Header
+        setQuery={setQuery}
+        setSelectedMeal={setSelectedMeal}
+        mealType={mealType}
+        getData={getData}
+      />
+      {!recipes && (
+        <ImgDiv>
+          <HomeImg src={homeSvg} />
+        </ImgDiv>
+      )}
+
+      {recipes?.length === 0 && (
+        <HeaderText>The food can not be found!</HeaderText>
+      )}
+
+      {recipes?.length > 0 && <Cards recipes={recipes} />}
     </div>
   );
 };
