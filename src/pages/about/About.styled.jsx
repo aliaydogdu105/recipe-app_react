@@ -12,17 +12,25 @@ export const AboutContainer = styled(Flex)`
 `;
 
 export const InfoContainer = styled.div`
-  text-align: right;
+  text-align: start;
   margin: 0 0.7rem;
   max-width: 1000px;
   border: 1px solid white;
-  padding: 5rem;
+  padding: 2rem;
   border-radius: 5px;
   a {
     color: white;
   }
+  @media (max-width: 375px) {
+    width: 350px;
+    word-wrap: break-word;
+  }
 `;
+
 export const StyledImage = styled.img`
   width: 500px;
   margin-bottom: 2rem;
+  @media (max-width: 375px) {
+    width: 300px;
+  }
 `;

@@ -17,12 +17,12 @@ export const DetailPart = styled(Flex)`
 `;
 
 export const ImgContainer = styled.div`
-  border: 1px solid #00adb5;
+  border: 1px solid #00abc0;
   padding: 10px;
   border-radius: 3px;
   margin: 2rem;
   img {
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,19 +32,19 @@ export const ImgContainer = styled.div`
 export const HeaderContainer = styled(Flex)`
   margin: 25px;
   img {
-    width: 200px;
+    width: 150px;
   }
 `;
 
 export const IngContainer = styled.div`
-  width: 400px;
-  font-size: 1.4rem;
-  margin: 2rem;
+  width: 200px;
+  font-size: 1.5rem;
+  margin: 1rem;
 `;
 
 export const OtherPart = styled.div`
-  width: 400px;
-  text-align: right;
+  width: 300px;
+  text-align: left;
   font-size: 1.8rem;
   margin: 2rem;
 `;

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 const Nav = styled(Flex)`
   padding: 1rem 2rem;
   background: ${({ theme }) => theme.colors.navbarBgColor};
+  @media (max-width: 375px) {
+    width: fit-content;
+  }
 `;
 
 export const Logo = styled(Link)`
