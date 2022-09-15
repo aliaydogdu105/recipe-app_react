@@ -54,7 +54,7 @@ Recipe App
 └── yarn.lock
 ```
 
-For look [please click here](https://https://recipe-app-react-ali.netlify.app/)
+For look [please click here](https://recipe-app-react-ali.netlify.app/)
 
 ![](recipe-app.gif)
 
