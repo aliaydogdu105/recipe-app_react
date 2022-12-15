@@ -1,6 +1,10 @@
 # Recipe App
 
+<<<<<<< HEAD
 This project was made with Reactjs. Styled with "styled-components" and responsive design for mobile phones. Used api key and `axios` for getting data from
+=======
+This project was made with Reactjs. Styled with "styled-components" and responsive design for mobile phones. Used api key and `axios` for getting data from 
+>>>>>>> f17ec2ea1b86ee06fb2d70f67a330d0c9b53b4c2
 `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`. For login random
 background image from `https://picsum.photos/1600/900`
 
@@ -54,6 +58,6 @@ Recipe App
 └── yarn.lock
 ```
 
-For look [please click here](https://https://recipe-app-react-ali.netlify.app/)
+For look [please click here](https://recipe-app-react-ali.netlify.app/)
 
 ![](recipe-app.gif)
